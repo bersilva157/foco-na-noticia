@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foco na Notícia 01 | Seu portal de notícias</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .category-tag {
+            transition: all 0.3s ease;
+        }
+        .category-tag:hover {
+            transform: scale(1.05);
+        }
+        .navbar {
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Top Bar -->
+    <div class="bg-blue-900 text-white py-2 px-4 text-sm">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>Brasília, DF - <span id="current-date"></span></div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-blue-200"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-blue-200"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-blue-200"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-blue-200"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header/Navbar -->
+    <header class="navbar bg-white/90 shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-4 md:mb-0">
+                <div class="bg-blue-600 text-white p-2 rounded-lg mr-3">
+                    <i class="fas fa-newspaper text-2xl"></i>
+                </div>
+                <h1 class="text-3xl font-bold text-blue-900">Foco na Notícia <span class="text-blue-600">01</span></h1>
+            </div>
+            
+            <nav class="flex items-center space-x-1">
+                <a href="#" class="px-4 py-2 font-medium text-blue-900 hover:text-blue-600">Home</a>
+                <a href="#" class="px-4 py-2 font-medium text-gray-600 hover:text-blue-600">Brasil</a>
+                <a href="#" class="px-4 py-2 font-medium text-gray-600 hover:text-blue-600">Mundo</a>
+                <a href="#" class="px-4 py-2 font-medium text-gray-600 hover:text-blue-600">Política</a>
+                <a href="#" class="px-4 py-2 font-medium text-gray-600 hover:text-blue-600">Economia</a>
+                <a href="#" class="px-4 py-2 font-medium text-gray-600 hover:text-blue-600">Esportes</a>
+                <a href="#" class="px-4 py-2 font-medium text-gray-600 hover:text-blue-600">Tecnologia</a>
+                <button class="ml-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                    <i class="fas fa-search mr-2"></i>Buscar
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white">
+        <div class="container mx-auto px-4 py-16">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <span class="bg-blue-400 text-blue-900 font-bold px-3 py-1 rounded-full text-xs uppercase">Destaque</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">Novo pacote econômico pode reduzir impostos para setor tecnológico</h2>
+                    <p class="text-lg mb-6 text-blue-100">Governo federal anuncia medidas para estimular inovação e atrair investimentos estrangeiros na área de tecnologia.</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gray-300 rounded-full mr-3"></div>
+                        <div>
+                            <p class="font-medium">Carlos Silva</p>
+                            <p class="text-sm text-blue-200">Há 2 horas • 5 min de leitura</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gray-200 h-80 rounded-xl overflow-hidden">
+                        <!-- Placeholder for hero image -->
+                        <div class="w-full h-full flex items-center justify-center text-gray-500">
+                            <i class="fas fa-image text-5xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breaking News Ticker -->
+    <div class="bg-red-600 text-white py-3 px-4">
+        <div class="container mx-auto flex items-center">
+            <span class="font-bold mr-4 whitespace-nowrap">ÚLTIMA HORA:</span>
+            <div class="overflow-hidden">
+                <div class="animate-marquee whitespace-nowrap">
+                    <span class="mr-8">Tempestade tropical atinge litoral nordestino com ventos de até 90 km/h</span>
+                    <span class="mr-8">CPI da Covid: relatório final deve ser entregue na próxima semana</span>
+                    <span class="mr-8">Seleção brasileira convoca novos jogadores para amistosos internacionais</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="flex flex-col lg:flex-row">
+            <!-- Left Column - Featured News -->
+            <div class="lg:w-2/3 lg:pr-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">Notícias em Destaque</h2>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <!-- News Card 1 -->
+                    <div class="news-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                        <div class="h-48 bg-gray-200 relative">
+                            <!-- Placeholder for image -->
+                            <div class="w-full h-full flex items-center justify-center text-gray-500">
+                                <i class="fas fa-image text-5xl"></i>
+                            </div>
+                            <span class="absolute top-3 left-3 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full">Política</span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Senado aprova reforma trabalhista com mudanças na CLT</h3>
+                            <p class="text-gray-600 mb-4">Projeto segue para sanção presidencial após meses de debates acalorados no Congresso Nacional.</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="far fa-clock mr-1"></i> 4 horas atrás
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- News Card 2 -->
+                    <div class="news-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                        <div class="h-48 bg-gray-200 relative">
+                            <!-- Placeholder for image -->
+                            <div class="w-full h-full flex items-center justify-center text-gray-500">
+                                <i class="fas fa-image text-5xl"></i>
+                            </div>
+                            <span class="absolute top-3 left-3 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full">Meio Ambiente</span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Desmatamento na Amazônia cai 15% no último trimestre</h3>
+                            <p class="text-gray-600 mb-4">Dados do INPE mostram redução, mas especialistas alertam para necessidade de políticas de longo prazo.</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="far fa-clock mr-1"></i> 6 horas atrás
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Single Featured News -->
+                <div class="news-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 mb-8">
+                    <div class="md:flex">
+                        <div class="md:w-1/3 h-64 md:h-auto">
+                            <!-- Placeholder for image -->
+                            <div class="w-full h-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                <i class="fas fa-image text-5xl"></i>
+                            </div>
+                        </div>
+                        <div class="p-6 md:w-2/3">
+                            <span class="category-tag inline-block bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded-full mb-3">Tecnologia</span>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Nova inteligência artificial pode revolucionar diagnósticos médicos</h3>
+                            <p class="text-gray-600 mb-4">Sistema desenvolvido por startup brasileira alcança 98% de precisão na detecção precoce de câncer em exames de imagem, segundo estudo publicado em revista científica internacional.</p>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-gray-300 rounded-full mr-3"></div>
+                                <div>
+                                    <p class="font-medium text-sm">Amanda Costa</p>
+                                    <p class="text-xs text-gray-500">Há 8 horas • 7 min de leitura</p>
+                                </div>
+                            </div>Crie um encurtador de links em PHP, MySQL, HTML, CSS e JavaScript com as seguintes funções:  
+1. Interface simples com campo de entrada e botão.  
+2. Bloqueio de URLs de vídeo (YouTube, Vimeo, arquivos .mp4).  
+3. Geração de código curto aleatório (6 caracteres).  
+4. Redirecionamento automático.  
+5. Validação em tempo real no frontend.  
+Inclua código completo e instruções de configuração.  
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Category Section -->
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">Últimas Notícias</h2>
+                
+                <div class="space-y-6">
+                    <!-- News Item 1 -->
+                    <div class="flex flex-col md:flex-row border-b border-gray-100 pb-6">
+                        <div class="md:w-1/4 mb-4 md:mb-0">
+                            <div class="h-32 bg-gray-200 rounded-lg overflow-hidden">
+                                <!-- Placeholder for image -->
+                                <div class="w-full h-full flex items-center justify-center text-gray-500">
+                                    <i class="fas fa-image text-3xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4 md:pl-6">
+                            <span class="inline-block bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full mb-2">Emergência</span>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Incêndio em hospital de São Paulo é controlado após 4 horas</h3>
+                            <p class="text-gray-600 mb-3">Bombeiros trabalharam durante a madrugada para conter as chamas. Todos os pacientes foram evacuados com segurança.</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="far fa-clock mr-1"></i> 1 hora atrás • <span class="ml-2"><i class="far fa-comment mr-1"></i> 24 comentários</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- News Item 2 -->
+                    <div class="flex flex-col md:flex-row border-b border-gray-100 pb-6">
+                        <div class="md:w-1/4 mb-4 md:mb-0">
+                            <div class="h-32 bg-gray-200 rounded-lg overflow-hidden">
+                                <!-- Placeholder for image -->
+                                <div class="w-full h-full flex items-center justify-center text-gray-500">
+                                    <i class="fas fa-image text-3xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4 md:pl-6">
+                            <span class="inline-block bg-yellow-600 text-white text-xs font-bold px-2 py-1 rounded-full mb-2">Economia</span>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Dólar cai para R$ 4,85 após anúncio do Fed sobre taxas de juros</h3>
+                            <p class="text-gray-600 mb-3">Mercados reagem positivamente à decisão do Federal Reserve de manter política monetária flexível.</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="far fa-clock mr-1"></i> 3 horas atrás • <span class="ml-2"><i class="far fa-comment mr-1"></i> 15 comentários</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- News Item 3 -->
+                    <div class="flex flex-col md:flex-row border-b border-gray-100 pb-6">
+                        <div class="md:w-1/4 mb-4 md:mb-0">
+                            <div class="h-32 bg-gray-200 rounded-lg overflow-hidden">
+                                <!-- Placeholder for image -->
+                                <div class="w-full h-full flex items-center justify-center text-gray-500">
+                                    <i class="fas fa-image text-3xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4 md:pl-6">
+                            <span class="inline-block bg-indigo-600 text-white text-xs font-bold px-2 py-1 rounded-full mb-2">Educação</span>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">MEC anuncia novo programa de bolsas para cursos técnicos</h3>
+                            <p class="text-gray-600 mb-3">Iniciativa deve beneficiar 50 mil estudantes de baixa renda em áreas com alta demanda no mercado de trabalho.</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="far fa-clock mr-1"></i> 5 horas atrás • <span class="ml-2"><i class="far fa-comment mr-1"></i> 32 comentários</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Load More Button -->
+                <div class="text-center mt-8">
+                    <button class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium">
+                        Carregar mais notícias
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Right Column - Sidebar -->
+            <div class="lg:w-1/3 mt-8 lg:mt-0">
+                <!-- Weather Widget -->
+                <div class="bg-white rounded-xl shadow-md p-5 mb-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-cloud-sun text-blue-500 mr-2"></i> Previsão do Tempo
+                    </h3>
+                    <div class="flex items-center justify-between mb-3">
+                        <div>
+                            <p class="text-gray-600">Brasília, DF</p>
+                            <p class="text-2xl font-bold">28°C</p>
+                        </div>
+                        <div class="text-4xl text-yellow-500">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-4 gap-2 text-center text-xs">
+                        <div class="p-2 rounded bg-blue-50">
+                            <p>Seg</p>
+                            <i class="fas fa-cloud-sun my-1 text-blue-400"></i>
+                            <p>27°C</p>
+                        </div>
+                        <div class="p-2 rounded bg-blue-50">
+                            <p>Ter</p>
+                            <i class="fas fa-sun my-1 text-yellow-400"></i>
+                            <p>29°C</p>
+                        </div>
+                        <div class="p-2 rounded bg-blue-50">
+                            <p>Qua</p>
+                            <i class="fas fa-cloud-rain my-1 text-blue-300"></i>
+                            <p>25°C</p>
+                        </div>
+                        <div class="p-2 rounded bg-blue-50">
+                            <p>Qui</p>
+                            <i class="fas fa-bolt my-1 text-purple-400"></i>
+                            <p>24°C</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="bg-blue-50 rounded-xl p-5 mb-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">Assine nossa newsletter</h3>
+                    <p class="text-gray-600 text-sm mb-4">Receba as principais notícias diretamente no seu e-mail.</p>
+                    <form class="space-y-3">
+                        <input type="text" placeholder="Seu nome" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="email" placeholder="Seu e-mail" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button type="submit" class="w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium">
+                            Assinar agora
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Most Read -->
+                <div class="bg-white rounded-xl shadow-md p-5 mb-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 border-b pb-2">Mais Lidas</h3>
+                    <div class="space-y-4">
+                        <div class="flex">
+                            <div class="bg-blue-100 text-blue-800 font-bold rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-1">1</div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 hover:text-blue-600 cursor-pointer">Vazamento de dados expõe milhões de usuários de rede social</h4>
+                                <p class="text-xs text-gray-500 mt-1">Há 10 horas • 2.4k visualizações</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="bg-blue-100 text-blue-800 font-bold rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-1">2</div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 hover:text-blue-600 cursor-pointer">Atriz brasileira é indicada ao Oscar de melhor atriz</h4>
+                                <p class="text-xs text-gray-500 mt-1">Há 1 dia • 1.8k visualizações</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="bg-blue-100 text-blue-800 font-bold rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-1">3</div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 hover:text-blue-600 cursor-pointer">Nova lei pode obrigar apps a compartilhar receita com criadores</h4>
+                                <p class="text-xs text-gray-500 mt-1">Há 2 dias • 1.5k visualizações</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="bg-blue-100 text-blue-800 font-bold rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-1">4</div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 hover:text-blue-600 cursor-pointer">Estudo revela aumento de 40% no uso de bicicletas nas grandes cidades</h4>
+                                <p class="text-xs text-gray-500 mt-1">Há 3 dias • 1.2k visualizações</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="bg-blue-100 text-blue-800 font-bold rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-1">5</div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 hover:text-blue-600 cursor-pointer">Banco central anuncia novas regras para crédito imobiliário</h4>
+                                <p class="text-xs text-gray-500 mt-1">Há 4 dias • 1.1k visualizações</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Advertisement -->
+                <div class="bg-gray-100 rounded-xl p-5 text-center">
+                    <p class="text-xs text-gray-500 mb-2">PUBLICIDADE</p>
+                    <div class="h-48 bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg flex items-center justify-center text-white">
+                        <div>
+                            <p class="font-bold text-lg">Espaço Publicitário</p>
+                            <p class="text-sm">Seu anúncio aqui</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4 flex items-center">
+                        <div class="bg-blue-600 text-white p-2 rounded-lg mr-3">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        Foco na Notícia 01
+                    </h4>
+                    <p class="text-gray-400">O portal de notícias mais confiável e atualizado do Brasil. Informação com credibilidade e imparcialidade.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 border-b border-gray-700 pb-2">Categorias</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Política</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Economia</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Mundo</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Esportes</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Tecnologia</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 border-b border-gray-700 pb-2">Institucional</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Sobre nós</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contato</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Anuncie</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Trabalhe conosco</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Termos de uso</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 border-b border-gray-700 pb-2">Redes Sociais</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">Baixe nosso app:</p>
+                    <div class="flex space-x-2 mt-2">
+                        <a href="#" class="flex-1 bg-gray-800 hover:bg-gray-700 text-white py-2 px-3 rounded text-sm flex items-center justify-center">
+                            <i class="fab fa-google-play mr-1"></i> Play Store
+                        </a>
+                        <a href="#" class="flex-1 bg-gray-800 hover:bg-gray-700 text-white py-2 px-3 rounded text-sm flex items-center justify-center">
+                            <i class="fab fa-apple mr-1"></i> App Store
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
+                <p>© 2023 Foco na Notícia 01. Todos os direitos reservados.</p>
+                <p class="mt-1">Desenvolvido com <i class="fas fa-heart text-red-500"></i> pela equipe Foco na Notícia</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current date
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('pt-BR', options);
+        
+        // Marquee animation for breaking news
+        document.addEventListener('DOMContentLoaded', function() {
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes marquee {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                }
+                .animate-marquee {
+                    display: inline-block;
+                    animation: marquee 20s linear infinite;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+        
+        // Simulate loading more news
+        document.querySelector('button').addEventListener('click', function() {
+            alert('Mais notícias seriam carregadas aqui em uma implementação real!');
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=Bersilva157/site-de-not-cias-salvo" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
